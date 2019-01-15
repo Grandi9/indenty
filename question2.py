@@ -1,10 +1,15 @@
 
+import numpy as np 
 
-import numpy as np
+a = np.random.randint(1000,size=(5,4)) 
+print(a)
 
-nums = np.random.rand(4,3)
-print(nums)
-#input check
+rows = a.shape[0]
+cols = a.shape[1]
 
-#output here
-print np.where(nums > 0.2, 0, nums)
+for i in range(0, rows):
+    for j in range(0, cols):
+        if (a[i,j]>50):
+        	a[i,j]=100
+
+print(a)
